@@ -1,7 +1,38 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-th,
-a {
-  padding: 0 1em 0 1em;
+.row p,
+.row h2 {
+  color: black;
+}
+
+.row h2 {
+  text-decoration: underline;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#product-show,
+.inner {
+    background-color: white;
+}
+
+#product-show,
+.inner,
+.img-responsive {
+  border: 1px solid black;
+}
+
+.inner {
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+.line {
+  border-top: 1px solid black;
 }
