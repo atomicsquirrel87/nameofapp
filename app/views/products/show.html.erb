@@ -1,19 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="center inner" id="product-show">
-      <%= image_tag(@product.image_url, class: "img-responsive center") %>
-      <h2><%= @product.name %></h2>
-      <p><%= @product.description %></p>
-      <p>Colour: <%= @product.colour %></p>
-      <p class="line"></p>
-      <p><strong><%= @product.price %> €</strong></p>
-      <p class="line"></p>
-      <br>
-    </div><!--end col-->
-  </div><!--end row-->
-</div><!--end container-fluid-->
+
+<%= render partial: "show" %>
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
