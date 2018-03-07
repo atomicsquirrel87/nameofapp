@@ -4,7 +4,10 @@ class OrdersController < ApplicationController
     @orders = Order.includes(:product).all
   end
 
+  # GET /products/1
+  # GET /products/1.json
   def show
+    @orders = Order.all
   end
 
   def new
