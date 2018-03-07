@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="center inner">
+      <h1>Order ID: <%= @order.id %></h1>
+      <%= image_tag(@order.product.image_url, class: "img-responsive center") %>
+      <h2><%= @order.product.name %></h2>
+      <p><%= @order.product.description %></p>
+      <p class="line"></p>
+      <p><strong><%= @order.product.price %> €</strong></p>
+      <p class="line"></p>
+      <%= link_to 'Back', orders_path %>
+      <br>
+    </div><!--end center-->
+  </div><!--end row-->
+</div><!--end container-fluid-->
