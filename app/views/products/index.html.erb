@@ -2,13 +2,10 @@
 
 <h1>Products</h1>
 
+<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
+
 <div class="container-fluid">
   <div class="row">
     <%= render @products %>
   </div><!--end row-->
 </div><!--end container-fluid-->
-
-<br>
-
-
-<%= link_to 'New Product', new_product_path %>
