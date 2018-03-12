@@ -1,2 +1,25 @@
 <h1>Contact</h1>
-<p>Email: something@something.com</p>
+
+<%= flash[:notice] %>
+
+<%= form_with(url:'/simple_pages/thank_you', method: 'post', local: true) do |form| %>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: 'form-control', placeholder: 'Enter Name...' %>
+      </div><!--end form-group-->
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: 'form-control', placeholder: 'Enter Email...' %>
+      </div><!--end form-group-->
+      <div class="form-group">
+        <%= form.label :message %>
+        <%= form.text_area :message, class: 'form-control', placeholder: 'Enter message...', size: '5x5' %>
+      </div><!--end form-group-->
+      <%= form.submit 'Send', class: 'form_label' %>
+    </div><!--end col-md-6-->
+  </div><!--end row-->
+
+<% end %>
