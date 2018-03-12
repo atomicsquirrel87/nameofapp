@@ -41,6 +41,18 @@ p {
   color: #777777;
 }
 
+#q,
+#search-button {
+  margin-top: 1.5em;
+}
+
+@media (max-width: 480px) {
+  #q,
+  #search-button {
+  margin-top: 0.5em;
+  }
+}
+
 li {
   margin-top: 1em;
   margin-bottom: 1em;
