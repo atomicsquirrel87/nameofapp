@@ -7,16 +7,16 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
       <div class="form-group">
-        <%= form.label :name %>
-        <%= form.text_field :name, class: 'form-control', placeholder: 'Enter Name...' %>
+        <%= form.label "Name*" %>
+        <%= form.text_field :name, class: 'form-control contact', placeholder: 'Enter Name...', required: true %>
       </div><!--end form-group-->
       <div class="form-group">
-        <%= form.label :email %>
-        <%= form.text_field :email, class: 'form-control', placeholder: 'Enter Email...' %>
+        <%= form.label "Email*" %>
+        <%= form.email_field :email, class: 'form-control contact', placeholder: 'Enter Email...', required: true, pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
       </div><!--end form-group-->
       <div class="form-group">
-        <%= form.label :message %>
-        <%= form.text_area :message, class: 'form-control', placeholder: 'Enter message...', size: '5x5' %>
+        <%= form.label "Message*" %>
+        <%= form.text_area :message, class: 'form-control contact', placeholder: 'Enter message...', size: '5x5', required: true %>
       </div><!--end form-group-->
       <%= form.submit 'Send', class: 'form_label' %>
     </div><!--end col-md-6-->
