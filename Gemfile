@@ -59,3 +59,7 @@ group :production do
 end
 
 gem 'figaro'
+
+gem 'devise'
+
+gem 'bcrypt', :require => 'bcrypt'

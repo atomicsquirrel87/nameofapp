@@ -1,0 +1,11 @@
+.registration:valid,
+.log-in:valid {
+  background:hsl(120, 50%, 90%);
+  border-color:hsl(120, 50%, 50%);
+}
+
+.registration:invalid,
+.log-in:invalid {
+  border-color:hsl(0, 50%, 50%);
+  background:hsl(0, 50%, 90%);
+}
