@@ -1,0 +1,27 @@
+<h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control log-in", placeholder: "Enter Email...", required: true, autofocus: true, autocomplete: "email", pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}'%>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control log-in", placeholder: "Enter Email...", required: true, autocomplete: "off" %>
+      </div><!-- end form-group -->
+      <% if devise_mapping.rememberable? -%>
+      <div class="form-group">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div><!-- end form-group -->
+      <% end -%>
+      <div class="form-group">
+        <%= f.submit "Log in", class: "form_label" %><br>
+      </div><!-- end form-group -->
+      <%= render "devise/shared/links" %>
+    </div><!--end col-md-4 -->
+  </div><!-- end row -->
+<% end %>
