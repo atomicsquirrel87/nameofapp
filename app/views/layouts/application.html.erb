@@ -11,8 +11,12 @@
   </head>
 
   <body>
-
-    <%= flash[:notice] %>
+    <% if alert %>
+      <div class="alert alert-warning" role="alert"><%= alert %></div>
+    <% end %>
+    <% if notice %>
+      <div class="alert alert-warning" role="alert"><%= flash[:notice] %></div>
+    <% end %>
 
     <nav class="navbar navbar-inverse navbar-fixed top" role="navigation">
       <div class="container-fluid">
@@ -48,7 +52,10 @@
             <li role="presentation"><%= link_to "Home", root_path %></li>
             <li role="presentation"><%= link_to "About", simple_pages_about_path %></li>
             <li role="presentation"><%= link_to "Products", products_path %></li>
+            <li role="presentation"><%= link_to "Orders", orders_path %></li>
+            <li role="presentation"><%= link_to "User", users_path %></li>
             <li role="presentation"><%= link_to "Contact", simple_pages_contact_path %></li>
+
           </ul>
         </div><!--end nav-->
       </div><!--end nav container-->

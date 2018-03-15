@@ -62,4 +62,6 @@ gem 'figaro'
 
 gem 'devise'
 
-gem 'bcrypt', :require => 'bcrypt'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt' if Gem.win_platform?
+
+gem 'cancancan', '~> 2.0'
