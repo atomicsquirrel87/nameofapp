@@ -1,0 +1,22 @@
+<% if signed_in? %>
+  <div class="row center">
+    <div class="col-md-4"></div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <br>
+        <h4 class="align">Add a review:</h4>
+      </div><!-- end form-group -->
+      <%= form_for([@product, @product.comments.build]) do |f| %>
+      <div class="form-group">
+        <%= f.text_area :body, class: "form-control", size: "5x5" %>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <div class="rating"></div>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= f.submit "Submit" %>
+      </div><!-- end form-group -->
+      <% end %>
+    </div><!-- end col-md-4 -->
+  </div><!-- end row -->
+<% end %>

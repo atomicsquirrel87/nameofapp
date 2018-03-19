@@ -1,14 +1,14 @@
 
 <%= link_to 'New User', new_user_path, class: "btn btn-default" %>
-<h1>User</h1><br>
+<h1 class="align">User</h1><br>
 
 
 <% @users.each do |user| %>
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-      <p><strong><%= user.email %></p><br>
-      <p><%= link_to 'Show', user %> | <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p class="align"><strong><%= user.email %></p><br>
+      <p class="align"><%= link_to 'Show', user %> | <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </div><!-- end col-md-4 -->
   </div><!-- end row -->
 <% end %>
