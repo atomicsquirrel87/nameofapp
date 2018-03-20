@@ -65,3 +65,5 @@ gem 'devise'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt' if Gem.win_platform?
 
 gem 'cancancan', '~> 2.0'
+
+gem 'will_paginate', '~> 3.1.1'
