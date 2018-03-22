@@ -10,6 +10,14 @@
         <%= f.email_field :email, class: "form-control registration", placeholder: "Enter Email...", required: true, autofocus: true, autocomplete: "email", pattern: '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
       </div><!-- end form-group -->
       <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, id: :user_first_name, class: "form-control registration", placeholder: "Enter First Name...", required: true %>
+      </div><!-- end form-group -->
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, id: :user_last_name, class: "form-control registration", placeholder: "Enter Last Name...", required: true %>
+      </div><!-- end form-group -->
+      <div class="form-group">
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -23,7 +31,8 @@
       <div class="form-group">
         <%= f.submit "Sign up" %>
       </div><!-- end form-group -->
-      <%= render "devise/shared/links" %>
+      <%= link_to "Log in", new_session_path(resource_name) %><br />
+      <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
     </div><!-- end col-md-4 -->
   </div><!-- end row -->
 <% end %>
