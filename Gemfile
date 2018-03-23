@@ -67,3 +67,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcry
 gem 'cancancan', '~> 2.0'
 
 gem 'will_paginate', '~> 3.1.1'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
