@@ -2,10 +2,12 @@ require 'rails_helper'
 
 describe ProductsController, type: :controller do
 
+  before do
+    @user = FactoryBot.create(:admin)
+    @user2 = FactoryBot.create(:user)
+    @product = FactoryBot.create(:product)
+  end
 
-  let(:user) { User.create!(email: "bla@bla.com", password: "123456", id: 1, first_name: "Don", last_name: "Dom", admin: true)}
-  let(:user_two) { User.create!(email: "bla@bla.de", password: "654321", id: 2, first_name: "La", last_name: "La", admin: false)}
-  let(:product) { Product.create!(name: "dog scarf", description: "warm and cosy", id: 1) }
 
 
   context 'GET #index' do
@@ -18,7 +20,7 @@ describe ProductsController, type: :controller do
 
   context 'GET #show' do
     it 'renders the show template' do
-      get :show, params: { id: product.id }
+      get :show, params: { id: @product.id }
       expect(response).to be_ok
       expect(response).to render_template('show')
     end
@@ -26,7 +28,7 @@ describe ProductsController, type: :controller do
 
   context 'GET #new as admin' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'renders the new template' do
       get :new
@@ -37,7 +39,7 @@ describe ProductsController, type: :controller do
 
   context 'GET #new as common user' do
     before do
-      sign_in user_two
+      sign_in @user2
     end
     it 'redirect to root' do
       get :new
@@ -48,20 +50,20 @@ describe ProductsController, type: :controller do
 
   context 'POST #create' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'renders products page if succesfully created' do
-      post :create, params: { product: { name: "basecap", description: "bla", id: 1}}
-      expect(response).to redirect_to('/products/1')
+      @product = FactoryBot.create(:product)
+      expect(response).to be_successful
     end
   end
 
   context 'GET #edit as admin' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'renders the edit template' do
-      get :edit, params: { id: product.id }
+      get :edit, params: { id: @product.id }
       expect(response).to be_ok
       expect(response).to render_template('edit')
     end
@@ -69,10 +71,10 @@ describe ProductsController, type: :controller do
 
   context 'GET #edit as common user' do
     before do
-      sign_in user_two
+      sign_in @user2
     end
     it 'redirect to root' do
-      get :edit, params: { id: product.id }
+      get :edit, params: { id: @product.id }
       expect(response).to have_http_status(302)
       expect(response).to redirect_to(root_path)
     end
@@ -80,21 +82,21 @@ describe ProductsController, type: :controller do
 
   context 'PATCH #update' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'should update product details' do
-      patch :update, params: { id: product.id, product: {description: "new description"}}
-      product.reload
-      expect(product.description).to eq "new description"
+      patch :update, params: { id: @product.id, product: {description: "new description"}}
+      @product.reload
+      expect(@product.description).to eq "new description"
     end
   end
 
   context 'DELETE #destroy' do
     before do
-      sign_in user
+      sign_in @user
     end
     it 'should delete product and redirect to products' do
-      delete :destroy, params: { id: product.id }
+      delete :destroy, params: { id: @product.id }
       expect(response).to redirect_to products_path
     end
   end
