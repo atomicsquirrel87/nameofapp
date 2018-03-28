@@ -7,3 +7,5 @@
   data-currency="eur"
   data-amount="<%= @product.price*100 %> €">
 </script>
+
+<%= hidden_field_tag(:product_id, @product.id) %>
