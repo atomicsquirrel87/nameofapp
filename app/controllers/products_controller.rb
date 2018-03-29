@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.search(search_term)
     else
-      byebug
       @products = Product.all
     end
     @products = @products.paginate(:page => params[:page], :per_page => 9)
