@@ -1,0 +1,8 @@
+<div class="product-review">
+  <% @comments.each do |comment| %>
+    <%= render comment %>
+  <% end %>
+  <div class="center">
+    <%= will_paginate @comments %>
+  </div>
+</div>

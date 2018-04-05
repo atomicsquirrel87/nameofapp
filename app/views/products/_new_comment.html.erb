@@ -2,12 +2,10 @@
   <div class="row center">
     <div class="col-md-4"></div>
     <div class="col-md-12">
+      <br>
+      <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
       <div class="form-group">
-        <br>
         <h4 class="align">Add a review:</h4>
-      </div><!-- end form-group -->
-      <%= form_for([@product, @product.comments.build]) do |f| %>
-      <div class="form-group">
         <%= f.text_area :body, class: "form-control", size: "5x5" %>
       </div><!-- end form-group -->
       <div class="form-group">

@@ -10,7 +10,7 @@
       <p class="line"></p>
       <p class="align"><strong><%= @product.price %> €</strong></p>
       <p class="line"></p>
-      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       <% if signed_in? %>
       <p class="line"></p>
       <%= form_with(url: '/payments/create') do |form| %>
