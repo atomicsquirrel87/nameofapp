@@ -1,6 +1,6 @@
 <div class="col-sm-12 col-md-4">
   <div class="inner">
-    <%= link_to image_tag(product.image_url, class: "img-responsive center"), product %>
+    <%= link_to image_tag(product.image_url, class: "img-responsive center img-zoom", data_zoom_image: product.image_url), product %>
     <h2 class="align"><%= product.name %></h2>
     <p class="align"><%= product.description %></p>
     <p class="line"></p>

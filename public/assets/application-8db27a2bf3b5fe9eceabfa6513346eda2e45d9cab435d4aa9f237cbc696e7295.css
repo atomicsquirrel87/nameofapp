@@ -1,0 +1,356 @@
+/* line 4, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/comments.scss */
+.rated img,
+.rating img {
+  display: inline;
+}
+/* line 4, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row p,
+.row h2,
+.row h1 {
+  color: black;
+}
+
+/* line 10, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row h2 {
+  text-decoration: underline;
+}
+
+/* line 14, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* line 21, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#product-show,
+.inner {
+  background-color: #F0EDE8;
+}
+
+/* line 26, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#product-show,
+.inner,
+.img-responsive {
+  border: 1px solid #E6E2E1;
+}
+
+/* line 32, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.inner {
+  margin-top: 2em;
+  padding-top: 1em;
+}
+
+/* line 37, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.line {
+  border-top: 1px solid black;
+}
+
+/* line 41, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.btn {
+  margin-left: 1em;
+}
+/* line 1, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: black;
+}
+/* line 25, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+}
+
+/* line 34, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 38, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 43, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 48, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 52, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 58, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 65, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 75, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 81, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 1, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* line 6, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  background-color: #E6E2E1;
+}
+
+/* line 14, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+h1,
+h2,
+li {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+/* line 20, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+h1,
+h2,
+li,
+.item p {
+  text-transform: uppercase;
+}
+
+/* line 27, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 31, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.align {
+  text-align: center;
+}
+
+/* line 35, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+h1,
+h2,
+footer,
+p {
+  color: #777777;
+}
+
+/* line 42, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#q,
+#search-button {
+  margin-top: 1.5em;
+}
+
+@media (max-width: 480px) {
+  /* line 48, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+  #q,
+  #search-button {
+    margin-top: 0.5em;
+  }
+}
+/* line 54, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+/* line 60, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+li,
+.item p {
+  color: white;
+}
+
+/* line 65, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+nav {
+  background-color: black;
+}
+
+/* line 70, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+p {
+  font-family: Georgia, "Times New Roman", Palatino, serif;
+  font-size: 1.5em;
+}
+
+/* line 75, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.item p {
+  font-size: 2em;
+}
+
+/* line 79, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+footer {
+  margin-top: 2em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+/* line 88, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#carousel-example-generic,
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 95, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+#carousel-example-generic {
+  max-width: 30%;
+}
+
+@media (max-width: 480px) {
+  /* line 100, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+  #carousel-example-generic {
+    max-width: 100%;
+  }
+}
+/* line 105, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.contact:valid {
+  background: #d9f2d9;
+  border-color: #40bf40;
+}
+
+/* line 110, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.contact:invalid {
+  border-color: #bf4040;
+  background: #f2d9d9;
+}
+
+/* line 115, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/simple_pages.scss */
+.alert {
+  margin: 0;
+}
+/* line 1, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.registration:valid,
+.log-in:valid {
+  background: #d9f2d9;
+  border-color: #40bf40;
+}
+
+/* line 7, C:/Users/Dominik/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.registration:invalid,
+.log-in:invalid {
+  border-color: #bf4040;
+  background: #f2d9d9;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/raty.eot");
+  src: url("./fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/raty.svg#raty") format("svg");
+  src: url("./fonts/raty.ttf") format("truetype");
+  src: url("./fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
