@@ -1,11 +1,13 @@
-<div class="col-sm-12 col-md-4">
-  <div class="inner">
-    <%= link_to image_tag(product.image_url, class: "img-responsive center img-zoom", data_zoom_image: product.image_url), product %>
-    <h2 class="align"><%= product.name %></h2>
-    <p class="align"><%= product.description %></p>
-    <p class="line"></p>
-    <p class="align"><strong><%= product.price %> €</strong></p>
-    <p class="line"></p>
-    <%= link_to 'Show', product %><% if signed_in? && current_user.admin? %> | <%= link_to 'Edit', edit_product_path(product) %> |   <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
-  </div>
-</div><!--end col-->
+<% cache product do %>
+  <div class="col-sm-12 col-md-4">
+    <div class="inner">
+      <%= link_to image_tag(product.image_url, class: "img-responsive center img-zoom", data_zoom_image: product.image_url), product %>
+      <h2 class="align"><%= product.name %></h2>
+      <p class="align"><%= product.description %></p>
+      <p class="line"></p>
+      <p class="align"><strong><%= product.price %> €</strong></p>
+      <p class="line"></p>
+      <%= link_to 'Show', product %><% if signed_in? && current_user.admin? %> | <%= link_to 'Edit', edit_product_path(product) %> |   <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+    </div>
+  </div><!--end col-->
+<% end %>

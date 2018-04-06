@@ -3,12 +3,14 @@
     <div class="col-md-3"></div>
     <div class="col-md-12">
     <div class="center inner" id="product-show">
-      <%= image_tag(@product.image_url, class: "img-responsive center img-zoom", data_zoom_image: @product.image_url, height: '350', width: '350',) %>
-      <h2 class="align"><%= @product.name %></h2>
-      <p class="align"><%= @product.description %></p>
-      <p class="align">Colour: <%= @product.colour %></p>
-      <p class="line"></p>
-      <p class="align"><strong><%= @product.price %> €</strong></p>
+      <% cache @product do %>
+        <%= image_tag(@product.image_url, class: "img-responsive center img-zoom", data_zoom_image: @product.image_url, height: '350', width: '350',) %>
+        <h2 class="align"><%= @product.name %></h2>
+        <p class="align"><%= @product.description %></p>
+        <p class="align">Colour: <%= @product.colour %></p>
+        <p class="line"></p>
+        <p class="align"><strong><%= @product.price %> €</strong></p>
+      <% end %>
       <p class="line"></p>
       <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       <% if signed_in? %>
