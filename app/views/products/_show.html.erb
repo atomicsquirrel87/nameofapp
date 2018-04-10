@@ -12,6 +12,8 @@
         <p class="align"><strong><%= @product.price %> €</strong></p>
       <% end %>
       <p class="line"></p>
+      <p>Views: <span class="badge"><%= @product.views %></span></p>
+      <p class="line"></p>
       <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       <% if signed_in? %>
       <p class="line"></p>
