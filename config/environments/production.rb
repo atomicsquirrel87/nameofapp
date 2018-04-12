@@ -111,6 +111,6 @@ Rails.application.configure do
                     }
 
   config.web_socket_server_url = "wss://dog-accessoires-berlin.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://dog-accessoires-berlin.herokuapp.com/', 'https://dog-accessoires-berlin.herokuapp.com/']
+  config.action_cable.allowed_request_origins = ['https://dog-accessoires-berlin.herokuapp.com/', 'http://dog-accessoires-berlin.herokuapp.com/']
 
 end
