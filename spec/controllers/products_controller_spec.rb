@@ -8,7 +8,12 @@ describe ProductsController, type: :controller do
     @product = FactoryBot.create(:product)
   end
 
-
+  context "when search is committed" do
+    it "returns products fitting search term" do
+		    get :index, params: {q: "Scarf"}
+			expect(assigns(:products)).to match_array([@product])
+		end
+  end
 
   context 'GET #index' do
     it 'renders the index template' do
@@ -91,13 +96,24 @@ describe ProductsController, type: :controller do
     end
   end
 
-  context 'DELETE #destroy' do
+  context 'DELETE #destroy as admin' do
     before do
       sign_in @user
     end
     it 'should delete product and redirect to products' do
       delete :destroy, params: { id: @product.id }
       expect(response).to redirect_to products_path
+    end
+  end
+
+  context 'DELETE #destroy as common user' do
+    before do
+      sign_in @user2
+    end
+    it 'redirect to root' do
+      delete :destroy, params: { id: @product.id }
+      expect(response).to have_http_status(302)
+      expect(response).to redirect_to(root_path)
     end
   end
 
