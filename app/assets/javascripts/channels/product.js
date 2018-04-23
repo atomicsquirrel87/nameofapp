@@ -1,6 +1,5 @@
 App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
-    App.product.listen_to_comments();
     // Called when the subscription is ready for use on the server
   },
 
